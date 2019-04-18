@@ -6,7 +6,7 @@ const baseUrl = 'http://localhost:4000'
 
 const eventsFetched = events => ({
   type: EVENTS_FETCHED,
-  events
+  payload: events
 })
 
 export const loadEvents = () => (dispatch, getState) => {
