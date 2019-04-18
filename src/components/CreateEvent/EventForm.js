@@ -4,21 +4,18 @@
   OK  2. Without state
   OK  3. Calling the onSubmit 
   OK  4. and onChange callbacks. 
-  --  5. The <input> fields should also use the values. 
-  --  6. Add a field for name, date and description 
-  --  7. and a submit button.
+  OK  5. The <input> fields should also use the values. 
+  OK  6. Add a field for name, date and description 
+  OK  7. and a submit button.
  */
 
 import React from 'react'
 import '../../App.css'
 
 export default function EventForm(props) {
-  // const { ele } = this.props
-  console.log('PROPS from EventForm:', props)
-
   return (
     <div>
-      <form class='submit-form'>
+      <form className='submit-form'>
         name <input
           type='text'
           name='name'

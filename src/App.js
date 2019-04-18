@@ -3,7 +3,7 @@ import store from './store'
 import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
 import EventListContainer from './components/EventList/EventListContainer';
-import CreateEventFormContainer from './components/CreateEvent/CreateEventFormContainer';
+import EventDetailsContainer from './components/EventDetails/EventDetailsContainer';
 
 
 class App extends Component {
@@ -12,7 +12,7 @@ class App extends Component {
         <Provider store={store}>
           <div>
             <Route path='/' exact component={EventListContainer}/>
-            <CreateEventFormContainer />
+            <Route path='/events/:id' component={EventDetailsContainer}/>
           </div>
         </Provider>
     );
