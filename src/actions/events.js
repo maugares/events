@@ -78,3 +78,22 @@ export const deleteEvent = (id) => dispatch => {
       dispatch(eventDeleted(id))
     })
 }
+
+/*-------     updateEvent     -------*/
+
+export const EVENT_UPDATE_SUCCESS = 'EVENT_UPDATE_SUCCESS'
+
+const eventUpdateSuccess = event => ({
+  type: EVENT_CREATE_SUCCESS,
+  payload: event
+})
+
+export const updateEvent = (id, data) => dispatch => {
+  request
+    .get(`${baseUrl}/events/${id}`)
+    .put(data)
+    .then(response => {
+      dispatch(eventUpdateSuccess(response.body))
+    })
+    .catch(console.error)
+}

@@ -10,7 +10,7 @@
  */
 
 import React from 'react'
-import '../../App.css'
+import '../../app/App.css'
 
 export default function EventForm(props) {
   return (
