@@ -10,6 +10,7 @@
  */
 
 import React from 'react'
+import '../App.css'
 
 export default function EventForm(props) {
   // const { ele } = this.props
@@ -17,18 +18,18 @@ export default function EventForm(props) {
 
   return (
     <div>
-      <form>
-        name: <input
+      <form class='submit-form'>
+        name <input
           type='text'
           name='name'
           value={props.name}
           onChange={props.onChange} />
-        date: <input
+        date <input
           type='date'
           name='date'
           value={props.date}
           onChange={props.onChange} />
-        description: <input
+        description <input
           type='text'
           name='description'
           value={props.description}
