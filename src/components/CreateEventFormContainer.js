@@ -3,13 +3,13 @@ import { connect } from 'react-redux'
 import { createEvent } from '../actions/events'
 import EventForm from './EventForm'
 
-export class CreateEventFormContainer extends Component {
+class CreateEventFormContainer extends Component {
   state = {
     name: '',
     date: '',
     description: '',
   }
-
+  
   onChange = (event) => {
     this.setState({
       [event.target.name]: event.target.value
@@ -19,19 +19,21 @@ export class CreateEventFormContainer extends Component {
   onSubmit = (event) => {
     event.preventDefault()
     this.setState({
-      name: '',
-      date: '',
-      description: '',
+      name: this.state.name,
+      date: this.state.date,
+      description: this.state.description,
     })
     this.props.createEvent(this.state)
   }
 
   render() {
-    return (
-      <div>
-
-      </div>
-    )
+    return <EventForm
+      onChange={this.onChange}
+      onSubmit={this.onSubmit}
+      name={this.state.name}
+      date={this.state.date}
+      description={this.state.description}
+    />
   }
 }
 

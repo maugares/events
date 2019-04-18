@@ -32,10 +32,12 @@ const eventCreateSuccess = event => ({
 })
 
 export const createEvent = (data) => dispatch => {
+  console.log('data test:', data)
   request
     .post(`${baseUrl}/events`)
     .send(data)
     .then(response => {
+      console.log('response test:', response)
       dispatch(eventCreateSuccess(response.body))
     })
     .catch(console.error)

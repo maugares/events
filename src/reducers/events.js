@@ -6,7 +6,7 @@
   DONE  4, Add the events reducer to the reducers/index.js. 
 */
 
-import { EVENTS_FETCHED } from "../actions/events"
+import { EVENTS_FETCHED, EVENT_CREATE_SUCCESS } from "../actions/events"
 
 const initialState = {
   events: []
@@ -16,6 +16,9 @@ export default (state = initialState, action) => {
   switch (action.type) {
     case EVENTS_FETCHED:
       return action.payload
+
+    case EVENT_CREATE_SUCCESS:
+      return [...state, action.payload]
 
     default:
       return null
