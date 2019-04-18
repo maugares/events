@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import store from './store'
 import { Provider } from 'react-redux'
 import { Route } from 'react-router-dom'
-import EventListContainer from './components/EventListContainer';
-import CreateEventFormContainer from './components/CreateEventFormContainer';
+import EventListContainer from './components/EventList/EventListContainer';
+import CreateEventFormContainer from './components/CreateEvent/CreateEventFormContainer';
 
 
 class App extends Component {
