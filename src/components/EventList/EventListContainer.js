@@ -12,7 +12,7 @@ import React from 'react'
 import { loadEvents } from '../../actions/events'
 import { connect } from 'react-redux'
 import EventsList from './EventsList'
-import CreateEventFormContainer from '../../components/CreateEvent/CreateEventFormContainer';
+import CreateEventFormContainer from '../EventForm/CreateEventFormContainer';
 
 class EventsListContainer extends React.Component {
   componentDidMount() {

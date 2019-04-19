@@ -8,11 +8,6 @@ class EventDetailsContainer extends React.Component {
     this.props.loadEvent(Number(this.props.match.params.id))
   }
 
-  // onDelete = (id) => {
-  //   this.props.deleteEvent(Number(this.props.match.params.id))
-  //   this.props.history.push('/')
-  // }
-
   onDelete = () => {
     this.props.deleteEvent(this.props.event.id)
     this.props.history.push('/')
